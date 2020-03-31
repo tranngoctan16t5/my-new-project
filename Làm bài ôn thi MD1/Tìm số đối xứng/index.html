@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var nhap = parseInt(prompt("Nhập vào số cần kiểm tra"));
+    let soDaoNguoc = 0;
+    let soDu = "";
+
+    function timSDN(so) {
+        while (so > 0) {
+            soDu = so % 10;
+            soDaoNguoc = soDaoNguoc * 10 + soDu;
+            so = Math.floor(so / 10);
+        }
+        return soDaoNguoc;
+    }
+
+    function soDoiXung(number) {
+        if (timSDN(nhap)==number) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    if(soDoiXung(nhap)){
+        alert("đối xứng");
+    }else {
+        alert("Không đối xứng");
+    }
+
+
+</script>
+</body>
+</html>
